@@ -7,4 +7,7 @@
     -(cantidad de productos)
     -pagar impuesto de entrada al pais (lo digita aduanas)
     */
+
+    let boton=document.getElementById("btnCalcular");
+    console.log(boton);
    
