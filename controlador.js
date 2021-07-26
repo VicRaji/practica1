@@ -7,6 +7,15 @@
     -(cantidad de productos)
     -pagar impuesto de entrada al pais (lo digita aduanas)
     */
+   //--------------------------------------------------------------------------
+   /* Para colocar una alerta en la pantalla y poder ingresar datos también
+
+   var nombre;
+
+   nombre=prompt("Ingresa tu nombre")
+   edad=prompt("ingresa tu edad")
+
+   document.write("Tu, " + nombre + " tienes " + edad)*/
 
     let boton=document.getElementById("btnCalcular");
     console.log(boton);
