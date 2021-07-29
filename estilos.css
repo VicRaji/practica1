@@ -6,7 +6,6 @@
 }
 .formulario{
     border-radius:6px;
-    color: ;
     padding:20px;
     margin: 0 auto;
     width:350px;
@@ -16,4 +15,8 @@
 }
 .tituloForm{
     font-weight: bold;
+}
+.Text{
+    border:0;
+    outline:none;
 }
