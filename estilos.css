@@ -4,3 +4,16 @@
 .form{
     padding: 15rem;
 }
+.formulario{
+    border-radius:6px;
+    color: ;
+    padding:20px;
+    margin: 0 auto;
+    width:350px;
+}
+.main{
+    background-color: #1c6688;
+}
+.tituloForm{
+    font-weight: bold;
+}
