@@ -1,5 +1,6 @@
 .nav{
-    background-color: black;
+    background-color: #282A2B;
+    color:white;
 }
 .form{
     padding: 15rem;
@@ -19,4 +20,7 @@
 .Text{
     border:0;
     outline:none;
+}
+.fondoIcono{
+    color:white;
 }
