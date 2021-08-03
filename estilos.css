@@ -1,5 +1,5 @@
 .nav{
-    background-color: #282A2B;
+    background-color: #15191b;
     color:white;
 }
 .form{
@@ -22,5 +22,14 @@
     outline:none;
 }
 .fondoIcono{
+    text-decoration: none;
     color:white;
+}
+.fondoIcono:hover{
+    color:orange;
+}
+
+.carrito{
+    transform: scale(1.1);
+     padding-bottom: 15px;
 }
