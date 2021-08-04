@@ -28,6 +28,15 @@ let pesoConsola;
 
          let consolaElegida=document.getElementById("producto").value;
          seleccionarConsola(consolaElegida);
+
+         let cantidad=document.getElementById("cantidad").value;
+
+         let pildora=document.getElementById("pildora");
+         pildora.textContent=cantidad;
+         
+         let comentarios=document.getElementById("comentarios").value;
+         console.log(comentarios);
+
    }
 
  // 5. Seleccionar la información de la consola según la selección del usuario
