@@ -2,9 +2,7 @@
     background-color: #15191b;
     color:white;
 }
-.form{
-    padding: 15rem;
-}
+
 .formulario{
     border-radius:6px;
     padding:20px;
@@ -14,22 +12,10 @@
 .main{
     background-color: #42839d;
 }
-.tituloForm{
-    font-weight: bold;
-}
-.Text{
-    border:0;
-    outline:none;
-}
 .fondoIcono{
     text-decoration: none;
     color:white;
 }
 .fondoIcono:hover{
     color:orange;
-}
-
-.carrito{
-    transform: scale(1.1);
-     padding-bottom: 15px;
 }
