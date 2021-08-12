@@ -47,9 +47,6 @@ function convertiraPesos(precioDolares){
     let precioPesos= precioDolares*TRM;
 
     return precioPesos;
-
-
-
 }
 
 //FLUJO DE COMPRA

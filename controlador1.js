@@ -18,10 +18,12 @@ let fotoCarro;
  // 1. Controlar con JS el boton del formulario  
     let boton=document.getElementById("btnCalcular");
     let botonLimpiar=document.getElementById("botonLimpiar");
+    let botonCop=document.getElementById("btnCop")
 
  // 2. Detectar el clic en el botón
    boton.addEventListener("click",capturarDatos);  //callBack
    botonLimpiar.addEventListener("click",limpiarCarrito);
+   botonCop.addEventListener("click", conversion)
 
  // 3. Crear función PROPIA que se llamó en el punto 2
  
@@ -60,21 +62,27 @@ function capturarDatos(){
          let costoTotal=document.getElementById("costoTotal");
          costoTotal.textContent=`Costo Total: $${(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuesto(precioConsola,cantidad))} USD`;
 
+         let cantidadProducto=document.getElementById("cantidadModal");
+         cantidadProducto.textContent=`Cantidad: ${cantidad}`;
+
          let pildora=document.getElementById("pildora");
          pildora.textContent=cantidad;
          pildora.classList.remove("invisible");
-         pildora.classList.add("visible");
+         pildora.classList.add("visible"); 
 
-         let linea1=document.getElementById("linea1");
-         linea1.textContent=cantidad;
-         linea1.classList.remove("invisible");
-         linea1.classList.add("visible"); 
+         let hr1=document.getElementById("linea1");
+         hr1.classList.remove("invisible");
+         hr1.classList.add("visible");
+
+         let hr2=document.getElementById("linea2");
+         hr2.classList.remove("invisible");
+         hr2.classList.add("visible");
+
+         let btnCop=document.getElementById("btnCop");
+         btnCop.classList.remove("invisible");
+         btnCop.classList.add("visible");
          
-         let linea2=document.getElementById("linea2");
-         linea2.textContent=cantidad;
-         linea2.classList.remove("invisible");
-         linea2.classList.add("visible"); 
-
+         
 }
 
  // 5. Seleccionar la información de la consola según la selección del usuario
@@ -82,10 +90,10 @@ function capturarDatos(){
  function seleccionarConsola(opcion){
 
       let consolas={
-         nombres:Array("PS5","XBOX SERIE X","NINTENDO SWITCH"),
-         precios:Array(750,700,409),
-         pesoLibras:Array(14.2,13.1,4.75),
-         fotos:Array("img/ps5.jpg" , "img/xbox.jpg" , "img/nintendo.png")
+         nombres:Array("PS5","XBOX SERIE X","NINTENDO SWITCH", "TV SAMSUNG"),
+         precios:Array(750,700,409,650),
+         pesoLibras:Array(14.2,13.1,4.75, 16,5),
+         fotos:Array("img/ps5.jpg" , "img/xbox.jpg" , "img/nintendo.png", "img/tv.png")
       }
 
       if (opcion==1){
@@ -108,6 +116,13 @@ function capturarDatos(){
          precioConsola=consolas.precios[2];
          pesoConsola=consolas.pesoLibras[2];
          fotoConsola=consolas.fotos[2];  
+      }
+      else if(opcion==4){
+
+         nombreConsola=consolas.nombres[3];
+         precioConsola=consolas.precios[3];
+         pesoConsola=consolas.pesoLibras[3];
+         fotoConsola=consolas.fotos[3];  
       }
       else{
 
@@ -173,13 +188,43 @@ function limpiarCarrito(){
    let costoTotal=document.getElementById("costoTotal");
    costoTotal.textContent="";
 
-   let linea1=document.getElementById("linea1");
-   linea1.classList.remove("visible");
-   linea1.textContent=cantidad;
-   linea1.classList.add("invisible"); 
+   let cantidadProducto=document.getElementById("cantidadModal");
+   cantidadProducto.textContent="";
+
+   let hr1=document.getElementById("linea1");
+   hr1.classList.remove("visible");
+   hr1.classList.add("invisible");
+
+   let hr2=document.getElementById("linea2");
+   hr2.classList.remove("visible");
+   hr2.classList.add("invisible");
    
-         let linea2=document.getElementById("linea2");
-         linea2.textContent=cantidad;
-         linea2.classList.remove("visible");
-         linea2.classList.add("invisible"); 
+   let btnCop=document.getElementById("btnCop");
+   btnCop.classList.remove("visible");
+   btnCop.classList.add("invisible");
+}
+
+function convertiraPesos(precioDolares){
+    
+   const TRM=3932; //3932 pesos equivalen a 1 dolar
+   let precioPesos= precioDolares*TRM;
+
+   return precioPesos;
+}
+function conversion(){
+
+   let cantidad=document.getElementById("cantidad").value;
+
+   let precioIndividual=document.getElementById("precioUnitarioCarrito");
+   precioIndividual.textContent=`$ ${convertiraPesos(precioConsola)} COP (costo unitario)`;
+
+   let costoCasillero=document.getElementById("costoCasillero");
+   costoCasillero.textContent=`Costo casillero $${convertiraPesos(calcularCostoCasillero(pesoConsola,cantidad))} COP`;
+
+   let costoImpuestos=document.getElementById("costoImpuestos");
+   costoImpuestos.textContent=`Costo venta(impuestos):$${convertiraPesos(calcularCostoImpuesto(precioConsola,cantidad))} COP`;
+
+   let costoTotal=document.getElementById("costoTotal");
+   costoTotal.textContent=`Costo Total: $${convertiraPesos(calcularCostoCasillero(pesoConsola,cantidad))+(calcularCostoImpuesto(precioConsola,cantidad))} COP`;
+
 }
