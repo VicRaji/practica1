@@ -94,11 +94,11 @@ function capturarDatos(){
  function seleccionarConsola(opcion){
 
       let consolas={
-         nombres:Array("2001","Thriller","Swimming", "Fuerza Natural", "Back In Black","Highway To Hell","Caress Your Soul","Audio Descriptivo","El Armador Del Sol","Favourite Worst Nightmare","Tranquility Base Hotel & Casino"," Black Holes and Revelations"),
-         precios:Array(150,168,98,102,153,127,68,45,47,86,79,98),
-         pesoLibras:Array(1.2,0.9,1.0,0.8,1.1,1.0,1.3,1.0,1.0,0.9,0.7,1.2),
-         fotos:Array("img/drDre.jpg" , "img/mj.jpg" , "img/mm.jpg", "img/gustavo.jpg","img/acdc.jpg","img/acdc2.jpg", "img/sticky.jpg", "img/l7l.jpg","img/l7l2.jpg","img/arc.jpg","img/arc2.jpg","img/muse.jpg"),
-         nombreA:Array("DR.DRE","MICHAEL JACKSON", "MAC MILLER", "GUSTAVO CERATI","AC/DC","STICKY FINGERS","LUIS7LUNES","ARCTIC MONKEYS","MUSE")
+         nombres:Array("2001","Thriller","Swimming", "Fuerza Natural", "Back In Black","Highway To Hell","Caress Your Soul","Audio Descriptivo","El Armador Del Sol","Favourite Worst Nightmare","Tranquility Base Hotel & Casino"," Black Holes and Revelations","The College Dropout","GO:OD AM","The Life Of Pablo"),
+         precios:Array(150,168,98,102,153,127,68,45,47,86,79,98,130,104,120),
+         pesoLibras:Array(1.2,0.9,1.0,0.8,1.1,1.0,1.3,1.0,1.0,0.9,0.7,1.2,0.8,0.7,0.7),
+         fotos:Array("img/drDre.jpg" , "img/mj.jpg" , "img/mm.jpg", "img/gustavo.jpg","img/acdc.jpg","img/acdc2.jpg", "img/sticky.jpg", "img/l7l.jpg","img/l7l2.jpg","img/arc.jpg","img/arc2.jpg","img/muse.jpg","img/west.jpg","img/mm2.jpg","img/west2.jpg"),
+         nombreA:Array("DR.DRE","MICHAEL JACKSON", "MAC MILLER", "GUSTAVO CERATI","AC/DC","STICKY FINGERS","LUIS7LUNES","ARCTIC MONKEYS","MUSE",)
 
       }
 
