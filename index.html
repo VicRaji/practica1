@@ -63,59 +63,15 @@
     </header>
     <main>
         <div class="container">
-            <div class="row mt-5">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                
-                <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="img/nintendo.png" class="d-block w-100" alt="nintendo" width="325px">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5>Nintendo Switch</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/ps5.jpg" class="d-block w-100" alt="ps5">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text-dark">Play Station 5</h5>
-                    <p class="text-dark">Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/xbox.jpg" class="d-block w-100" alt="xbox serie x">
-                    <div class="carousel-caption d-none d-md-block">
-                    <h5>Xbox Serie X</h5>
-                    <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                  <img src="img/tv.png" class="d-block w-100" alt="ps5">
-                  <div class="carousel-caption d-none d-md-block">
-                  <h5 class="text-white">Tv Samsung</h5>
-                  <p class="text-white">Some representative placeholder content for the second slide.</p>
-                  </div>
-              </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
-                </div>
-            </div>
-        </div>
-        <div class="container">
           <div class="row mt-5">
-                <form class="formulario bg-dark">
+                <form class="formulario formulario2">
                   <h3 class="text-center text-white fw-bold">CARRITO DE COMPRAS</h3>
                   <br>
                   <div class="mb-3">
-                    <label for="disabledTextInput" class="form-label text-white">Seleccione la consola</label>
+                    <label for="disabledTextInput" class="form-label  text-white">Seleccione el albúm</label>
                     <select id="producto" class="form-select">
                       <option value="0" selected>Seleccione...</option>
+                      <option value=""><hr></option>
                       <option value="1">2001</option>
                       <option value="2">THRILLER</option>
                       <option value="3">SWIMMING</option>
@@ -177,17 +133,18 @@
                         <p id="costoCasillero" class="fw-bold"></p>
                     </div>
                     <div class="col-6">
-                        <h5 id="tituloCarrito">Tu carrito de Amazon está vacío</h5>
-                        <h6 id="nombreAutor" class="text-info"></h6>
+                        <h5 id="tituloCarrito" class="fw-bold">Tu carrito de Amazon está vacío</h5>
+                        <h6 id="nombreAutor" class="text-info invisible"></h6>
                         <p id="precioUnitarioCarrito"></p>
                         <p id="pesoUnitarioCarrito"></p>
                         <p id="cantidadModal"></p>
 
                         <hr id="linea2" class="invisible">
                         <p id="costoImpuestos" class="fw-bold"></p>
-                        <h5 id="costoTotal" class="text-success fw-bold"></h5>
-                        <button class="btn btn-warning invisible" type="button" href="#" id="btnCop">COP</button>
-
+                        <h5 id="costoTotal" class="text-primary fw-bold"></h5>
+                        <div class="d-grid gap-2">
+                           <button class="btn btn-info invisible" type="button" href="#" id="btnCop">COP</button>
+                        </div>
                     </div>
                 </div>
               </div>
